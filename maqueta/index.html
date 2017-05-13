@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=gb18030">
+        <!--  SEO STUFF START HERE -->
+        <title>SIGLA :: Holding</title>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="@sergio_fmc" />
+        <meta name="robots" content="follow, index" />
+        <!--  SEO STUFF END -->
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/style-switcher/style-switcher.js"></script>        <!--  revolution slider plugin : begin -->
+        <link rel="stylesheet" type="text/css" href="rs-plugin/css/settings.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="css/rs-responsive.css" media="screen" />
+        <!--  revolution slider plugin : end -->
+        <link rel="stylesheet" href="css/bootstrap.css" />
+        <link rel="stylesheet" href="css/custom.css" />
+        <link rel="stylesheet" href="css/styler.css" />	
+        <link rel="stylesheet" href="css/isotope.css" />
+        <link rel="stylesheet" href="css/color_scheme.css" />
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="css/font-awesome.css" />
+        <link rel="stylesheet" href="css/font-awesome-ie7.css" />
+        <link rel="stylesheet" href="css/flexslider.css" />
+        <link rel="stylesheet" href="css/jquery.fancybox.css?v=2.1.0" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/jquery.countdown.css">
+        <!--[if lte IE 8]>
+            <link rel="stylesheet" type="text/css" href="css/IE-fix.css" />
+        <![endif]-->
+		
+    </head>
+    <body>
+   <div id="load" style="position:fixed; top:0; left:0; right:0; bottom:0; background:#fff; z-index:999999;"><span></span></div>
+		<div id="over">
+		<div id="out_container">
+        <!-- THE LINE AT THE VERY TOP OF THE PAGE -->
+        <div class="top_cs_line"></div>
+        <!-- HEADER AREA -->
+        <header>
+            <div class="container">
+                <div class="row">
+                    <!-- HEADER LOGO -->
+                    <div class="span12 logo center-logo">
+                        <img alt="logo" title="Sigla Holding" src="./img/Logo.png">
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- MAIN CONTENT AREA -->
+        <div class="main-content">
+
+            <!-- BEGIN ARTICLE CONTENT AREA -->
+
+            <div class="coming-soon-content">
+                <div class="coming-soon-topline"></div>
+                <h1>Sitio en Construcci&oacute;n...</h1>
+
+                <div id="countdown"></div>
+                <p id="note"></p>
+
+                <div class="coming-soon-subscribe">
+                    <form class="form-inline">
+                        <input type="text" class="input-small" placeholder="">
+                        <button type="submit" class="coming-soon-btn">Subscribe</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- END ARTICLE CONTENT AREA -->
+
+        </div>
+        <!-- FOOTER STARTS HERE -->
+        <footer id="footer" class="coming-soon-footer">
+            <div class="footer-wrapper footer-cs">
+                <div class="container">
+                    <div class="row show-grid">
+                        <div class="span12">
+                            <ul class="footer-socials">
+								<li><a class="tw" href="http://www.twitter.com/sigla_holding"></a></li>
+                                <li><a class="in" href="#"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom footer-bottom-cs">
+                <div class="container">
+                    <div class="row show-grid">
+                        <div class="span12">
+                            <p class="bottom-p">SiglaHolding 2014. Todos los derechos reservados. Powered by @sergio_fmc</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+		
+		</div>
+        	<!-- END FOOTER -->
+	</div>
+		
+	
+	
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+        <script type="text/javascript" src="js/jquery.isotope.js"></script>
+        <script type="text/javascript" src="js/jquery.fancybox.pack.js?v=2.1.0"></script>
+        <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+        <script type="text/javascript" src="rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+        <script type="text/javascript" src="js/revolution.custom.js"></script>
+        <script type="text/javascript" src="js/custom.js"></script>
+		<!-- Color Selector: remove this script to disable -->
+		<!--<script type="text/javascript" src="js/styleswitch.js" ></script>-->
+        <script src="js/jquery.countdown.js"></script>
+        <script>
+		jQuery(function(){
+
+	var note = jQuery('#note'),
+		ts = new Date(2012, 0, 1),
+		newYear = true;
+
+	if((new Date()) > ts){
+		// The new year is here! Count towards something else.
+		// Notice the *1000 at the end - time must be in milliseconds
+		var austDay = new Date();
+		austDay = new Date(austDay.getFullYear(), 11, 15);
+		ts = (austDay);
+		newYear = false;
+	}
+
+	jQuery('#countdown').countdown({
+		timestamp	: ts,
+		callback	: function(days, hours, minutes, seconds){
+
+			var message = "";
+
+			message += days + " day" + ( days==1 ? '':'s' ) + ", ";
+			message += hours + " hour" + ( hours==1 ? '':'s' ) + ", ";
+			message += minutes + " minute" + ( minutes==1 ? '':'s' ) + " and ";
+			message += seconds + " second" + ( seconds==1 ? '':'s' ) + " <br />";
+
+			note.html(message);
+		}
+	});
+
+});
+</script>
+      
+    </body>
+</html>
